@@ -11,7 +11,7 @@
 [![Isolação](https://img.shields.io/badge/Isola%C3%A7%C3%A3o-%C3%93ptica%20PC817-orange)](.)
 [![Trigger](https://img.shields.io/badge/Trigger-High%20Level-green)](.)
 [![Montagem](https://img.shields.io/badge/Montagem-PTH-blueviolet)](.)
-[![ZAT ELECTRONIC](https://img.shields.io/badge/Feito%20por-ZAT%20Electronic-black)](.)
+[![ZAT ELECTRONIC](https://img.shields.io/badge/Feito%20por-ZAT%20ELECTRONIC-black)](.)
 [![Made in Brazil](https://img.shields.io/badge/Made%20in-Brazil%20%F0%9F%87%A7%F0%9F%87%B7-009c3b)](.)
 
 </div>
@@ -69,21 +69,15 @@ O circuito utiliza o optoacoplador **PC817** (DIP-4 PTH) para isolar eletricamen
 
 <br/>
 
-<img src="PCB_3D_MODEL.jpg" alt="Modelo 3D da PCB" width="700"/>
 
-*Modelo 3D da PCB — visão completa com todos os componentes montados*
 
 <br/>
 
-<img src="LAYOUT_PCB.jpg" alt="Layout da PCB" width="700"/>
 
-*Layout da PCB — roteamento, furos e serigrafias*
 
 <br/>
 
-<img src="SCHEMATIC.jpg" alt="Esquemático" width="700"/>
 
-*Esquemático completo — circuito de isolação óptica, driver e relé*
 
 </div>
 
@@ -242,9 +236,6 @@ MODULE_RELAY/
 ├── fp-info-cache                 # Cache de footprints
 ├── imagem_1.png                  # Render 3D superior
 ├── imagem_2.png                  # Render 3D isométrico
-├── PCB_3D_MODEL.jpg              # Modelo 3D da PCB
-├── LAYOUT_PCB.jpg                # Layout da PCB
-├── SCHEMATIC.jpg                 # Imagem do esquemático
 └── README.md
 ```
 
@@ -312,4 +303,4 @@ Projetado por **ZAT ELECTRONIC**
 [![KiCad](https://img.shields.io/badge/Projetado%20com-KiCad%2010-blue)](https://www.kicad.org/)
 [![Open Source Hardware](https://img.shields.io/badge/Open%20Source-Hardware-brightgreen)](https://www.oshwa.org/)
 
-</div>
+</div>>
