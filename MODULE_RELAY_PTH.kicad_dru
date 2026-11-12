@@ -1,0 +1,7 @@
+(version 1)
+
+# Contatos do relé K1 (rede elétrica até 125/250 VAC): zona/cobre GND fica a 3 mm de COMUM, NO e NC.
+# Só entre essas nets e o GND; o resto da placa segue o clearance padrão.
+(rule "REDE_AC_GND_3mm"
+	(constraint clearance (min 3mm))
+	(condition "A.NetName == 'GND' && (B.NetName == 'COMUM' || B.NetName == 'NO' || B.NetName == 'NC')"))

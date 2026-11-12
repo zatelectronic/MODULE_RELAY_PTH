@@ -4,7 +4,7 @@
 
 # MODULE RELAY
 
-**Módulo de relé isolado com acionamento por nível alto (High Level Trigger), componentes totalmente através-furo (PTH), isolação óptica e relé de potência 12VDC / 15A**
+**Módulo de relé com acionamento por nível alto (High Level Trigger), componentes totalmente através-furo (PTH), optoacoplador PC817 e relé de potência 12VDC / 15A**
 
 [![KiCad](https://img.shields.io/badge/KiCad-10-blue?logo=kicad&logoColor=white)](https://www.kicad.org/)
 [![Relé](https://img.shields.io/badge/Rel%C3%A9-12VDC%2015A-darkred)](.)
@@ -45,11 +45,11 @@
 
 ## Visão Geral
 
-**MODULE RELAY** é um módulo de acionamento de relé com **isolação galvânica total** entre o circuito de controle e a carga, projetado pela **ZAT ELECTRONIC** utilizando **KiCad 10**. Diferente da versão SMD, esta placa utiliza exclusivamente **componentes através-furo (PTH)**, tornando-a ideal para montagem manual, prototipagem e laboratórios maker.
+**MODULE RELAY** é um módulo de acionamento de relé com **acionamento por optoacoplador** (a entrada +IN e a bobina usam o mesmo GND do borne J1: não há isolação galvânica entre controle e alimentação; os contatos do relé são isolados da bobina), projetado pela **ZAT ELECTRONIC** utilizando **KiCad 10**. Diferente da versão SMD, esta placa utiliza exclusivamente **componentes através-furo (PTH)**, tornando-a ideal para montagem manual, prototipagem e laboratórios maker.
 
-O circuito utiliza o optoacoplador **PC817** (DIP-4 PTH) para isolar eletricamente o sinal de controle (proveniente de microcontroladores como Arduino, ESP32, etc.) do circuito de potência. O transistor **BC548** (TO-92 PTH) aciona a bobina do relé de potência 12VDC, capaz de comutar cargas de até **15A em 125VAC ou 24VDC**.
+O circuito utiliza o optoacoplador **PC817** (DIP-4 PTH) para acoplar o sinal de controle (proveniente de microcontroladores como Arduino, ESP32, etc.) do circuito de potência. O transistor **BC548** (TO-92 PTH) aciona a bobina do relé de potência 12VDC, capaz de comutar cargas de até **15A em 125VAC ou 24VDC**.
 
-> ⚡ **High Level Trigger** — o relé é acionado com sinal lógico alto (+3,3V ou +5V) no pino de entrada, com proteção por isolação óptica para máxima segurança do microcontrolador.
+> ⚡ **High Level Trigger** — o relé é acionado com sinal lógico alto (+3,3V ou +5V) no pino de entrada, com o LED do optoacoplador como carga do pino do microcontrolador.
 
 ---
 
@@ -88,11 +88,11 @@ O circuito utiliza o optoacoplador **PC817** (DIP-4 PTH) para isolar eletricamen
 | Característica | MODULE RELAY (PTH) | MODULE RELAY SMD |
 |----------------|-------------------|-----------------|
 | **Tipo de montagem** | Através-furo (PTH) | Montagem superficial (SMD) |
-| **Optoacoplador** | PC817 DIP-4 PTH | PC817S SOP-4 SMD |
-| **Transistor driver** | BC548 (TO-92 PTH) | MMBT2222A-TP (SOT-23 SMD) |
+| **Optoacoplador** | PC817 DIP-4 PTH | LTV-357T SOP-4 SMD |
+| **Transistor driver** | BC548 (TO-92 PTH) | MMBT2222A (SOT-23 SMD) |
 | **Resistores** | Axial 0,5W PTH | SMD 0805 |
 | **LED de status** | 5mm PTH azul | SMD 0805 |
-| **Diodo de roda livre** | 1N4007 PTH axial | 1N4007 SMA SMD |
+| **Diodo de roda livre** | 1N4007 PTH axial | S1M SMA SMD |
 | **Facilidade de montagem** | Alta — soldagem manual simples | Requer soldagem SMD |
 | **Público alvo** | Iniciantes, makers, laboratório | Produção, compacto, profissional |
 
@@ -100,8 +100,8 @@ O circuito utiliza o optoacoplador **PC817** (DIP-4 PTH) para isolar eletricamen
 
 ## Funcionalidades
 
-- ✅ **Relé de potência 12VDC / 15A** — contatos SPDT (NO, COM, NC), 15A 125VAC / 15A 24VDC
-- ✅ **Isolação óptica via PC817** (DIP-4 PTH) — proteção galvânica total entre controle e carga
+- ✅ **Relé de potência 12VDC / 15A** — contatos SPDT (NO, COMUM, NC), 15A 125VAC / 15A 24VDC
+- ✅ **Optoacoplador PC817** (DIP-4 PTH) — aciona o driver; controle e bobina compartilham o GND
 - ✅ **Transistor BC548** (TO-92 PTH) — driver NPN para acionamento da bobina
 - ✅ **Diodo de roda livre 1N4007** (PTH axial) — proteção contra tensão reversa da bobina
 - ✅ **LED azul 5mm PTH** — indicação visual de relé acionado
@@ -117,25 +117,16 @@ O circuito utiliza o optoacoplador **PC817** (DIP-4 PTH) para isolar eletricamen
 ```
 Microcontrolador / Sinal de Controle
         │
-    +IN ●──[R1 220Ω]──► PC817 (LED interno)
-    GND ●──────────────► PC817 (GND interno)
-                               │
-                         (Isolação óptica)
-                               │
-                         PC817 (Transistor)
-                               │
-              +12V ──[R4 470Ω]──► LED L1 (status azul)
-              +12V ──[R3 4,7KΩ]──► Base BC548 (Q1)
-                               │
-                        [R2 10KΩ] pull-down (Base→GND)
-                               │
-                        Coletor BC548 (Q1)
-                               │
-                    Bobina K1 (Relé 12VDC)
-                               │
-                        [D1 1N4007] ← Flyback
-                               │
-                        GND ───┘
+    +IN ●──[R1 220Ω]──► U1 PC817 (LED, pino 1) ── pino 2 ── GND
+                               │ (acoplamento óptico)
+    +12V ─────────────► U1 coletor (pino 4)
+                        U1 emissor (pino 3) ──[R2 4,7kΩ]──┬──► Base Q1 BC548
+                                                        [R4 10kΩ]
+                                                          │
+                                                         GND
+    +12V ──┬──────────────┬─────────[R3 470Ω]──[D1 LED azul]──┐
+       [Bobina K1]   [D2 1N4007] (roda livre)                 │
+           └──────────────┴───────────────────────────────────┴──► Coletor Q1 (emissor no GND)
 
               Contatos do Relé (J2 — OUT)
          ┌────────────────────────────────┐
@@ -154,10 +145,10 @@ Microcontrolador / Sinal de Controle
 | **Tensão da Bobina** | 12VDC |
 | **Corrente máx. de carga (AC)** | 15A @ 125VAC |
 | **Corrente máx. de carga (DC)** | 15A @ 24VDC |
-| **Tipo de contato** | SPDT — NO, NC, COM |
+| **Tipo de contato** | SPDT — NO, NC, COMUM |
 | **Tensão de alimentação do módulo** | +12V |
 | **Tensão de controle (sinal IN)** | 3,3V a 5V (High Level Trigger) |
-| **Isolação** | Óptica — PC817 DIP-4 |
+| **Optoacoplador** | PC817 DIP-4 — GND comum com a bobina |
 | **Transistor driver** | BC548 (TO-92, NPN) |
 | **Diodo de proteção** | 1N4007 (PTH axial) |
 | **LED de status** | 5mm PTH azul |
@@ -172,17 +163,17 @@ Microcontrolador / Sinal de Controle
 
 | Ref | Componente | Valor / Parte | Encapsulamento |
 |-----|-----------|--------------|----------------|
-| K1 | Relé de Potência | 12VDC / 15A SPDT | PTH |
+| K1 | Relé de Potência | AY1RC2 12VDC / 15A SPDT | PTH (pinagem SANYOU SRD) |
 | U1 | Optoacoplador | PC817 | DIP-4 PTH |
 | Q1 | Transistor NPN | BC548 | TO-92 PTH |
-| D1 | Diodo de Roda Livre | 1N4007 | PTH Axial |
-| L1 | LED de Status | LED 5mm Azul | PTH 5mm |
-| R1 | Resistor de entrada (opto) | 220Ω | Axial 0,5W PTH |
-| R2 | Resistor pull-down (base) | 10KΩ | Axial 0,5W PTH |
-| R3 | Resistor de base (transistor) | 4,7KΩ | Axial 0,5W PTH |
-| R4 | Resistor de LED | 470Ω | Axial 0,5W PTH |
+| D2 | Diodo de Roda Livre | 1N4007 | PTH Axial |
+| D1 | LED de Status | LED 5mm Azul | PTH 5mm |
+| R1 | Resistor de entrada (LED do opto) | 220Ω | Axial PTH |
+| R2 | Resistor série da base | 4,7kΩ | Axial PTH |
+| R4 | Resistor pull-down da base | 10kΩ | Axial PTH |
+| R3 | Resistor do LED de status | 470Ω | Axial PTH |
 | J1 | Borne de Entrada (Controle) | +12V, +IN, GND | KRE 3 pinos 5,0mm |
-| J2 | Borne de Saída (Carga) | NO, COM, NC | KRE 3 pinos 5,0mm |
+| J2 | Borne de Saída (Carga) | NO, COMUM, NC | KRE 3 pinos 5,0mm |
 
 ---
 
@@ -201,7 +192,7 @@ Microcontrolador / Sinal de Controle
 | Pino | Sinal | Descrição |
 |------|-------|-----------|
 | 1 | NO | Normalmente aberto (fecha quando acionado) |
-| 2 | COM | Terminal comum do relé |
+| 2 | COMUM | Terminal comum do relé |
 | 3 | NC | Normalmente fechado (abre quando acionado) |
 
 ---
@@ -209,10 +200,10 @@ Microcontrolador / Sinal de Controle
 ## Aplicações
 
 - 🏠 **Automação residencial** — acionamento de lâmpadas, tomadas e ventiladores
-- 🤖 **Projetos com Arduino e ESP32** — controle de cargas AC com isolação galvânica
+- 🤖 **Projetos com Arduino e ESP32** — controle de cargas AC
 - 🏫 **Ensino e prototipagem** — componentes PTH facilmente soldáveis e substituíveis
 - 💡 **Controle de iluminação** — painéis de LED de alta potência e luminárias
-- 🔌 **Proteção de circuitos** — isolação entre lógica de baixa tensão e rede elétrica
+- 🔌 **Comutação de cargas** — relé separa os contatos de carga da bobina (GND de controle e de alimentação é comum)
 - 📡 **IoT e domótica** — integração com sistemas MQTT, Home Assistant, etc.
 
 ---
@@ -220,22 +211,19 @@ Microcontrolador / Sinal de Controle
 ## Estrutura do Repositório
 
 ```
-MODULE_RELAY/
-├── MODULE_RELAY.kicad_pro        # Arquivo de projeto KiCad
-├── MODULE_RELAY.kicad_sch        # Esquemático (KiCad 10)
-├── MODULE_RELAY.kicad_pcb        # Layout da PCB (KiCad 10)
-├── MODULE_RELAY.kicad_prl        # Configurações locais do projeto
-├── packages3D/                   # Modelos 3D arquivados (STEP / WRL)
-│   ├── PC817_DIP.step
-│   ├── Relé_12VDC_15A.STEP
-│   ├── DG306-5.0-03P-12-00AH.STEP
-│   ├── Transistor BC548.STEP
-│   ├── Diodo 1N4007.STEP
-│   ├── LED 5mm Blue.step
-│   └── Resistor Axial 0.5W *.STEP
-├── fp-info-cache                 # Cache de footprints
+MODULE_RELAY_PTH/
+├── MODULE_RELAY_PTH.kicad_pro    # Arquivo de projeto KiCad 10
+├── MODULE_RELAY_PTH.kicad_sch    # Esquemático: capa A2 (índice das folhas)
+├── RELAY.kicad_sch               # Folha 02: optoacoplador + driver + relé
+├── CONN.kicad_sch                # Folha 03: bornes IN / OUT + PWR_FLAG
+├── MODULE_RELAY_PTH.kicad_pcb    # Layout da PCB (KiCad 10)
+├── MODULE_RELAY_PTH.kicad_prl    # Configurações locais
+├── MODULE_RELAY_PTH.kicad_dru    # Regra: GND a 3 mm dos contatos do relé
+├── Zat_TitleBlock.kicad_wks      # Title block ZAT ELECTRONIC
+├── packages3D/                   # Modelos 3D arquivados (referência)
 ├── imagem_1.png                  # Render 3D superior
 ├── imagem_2.png                  # Render 3D isométrico
+├── LEIA-ME_REVISAO_R01.md        # O que mudou na revisão R01
 └── README.md
 ```
 
@@ -254,7 +242,7 @@ Pino digital     ────────►  J1 - +IN
 Fonte 12VDC (+)  ────────►  J1 - +12V
 Fonte 12VDC (-)  ────────►  J1 - GND
 
-Carga AC/DC      ────────►  J2 - COM + NO (ou NC)
+Carga AC/DC      ────────►  J2 - COMUM + NO (ou NC)
 ```
 
 ### Exemplo de código Arduino
@@ -287,7 +275,8 @@ void loop() {
 - **Nunca toque nos terminais J2 (OUT)** enquanto houver carga CA conectada e o circuito energizado.
 - Utilize **caixa de proteção** adequada quando instalar em ambientes com acesso de pessoas.
 - Respeite a **corrente máxima de 15A** nos contatos do relé.
-- A isolação óptica protege o microcontrolador, mas **não substitui normas de segurança elétrica**.
+- O optoacoplador **não isola** o GND do microcontrolador do GND do módulo (são comuns no J1) e **não substitui normas de segurança elétrica**.
+- A zona GND fica a 3 mm das trilhas e pads dos contatos do relé (COMUM / NO / NC), por regra no MODULE_RELAY_PTH.kicad_dru. Conferir a creepage exigida pela norma da aplicação final.
 - Projeto destinado a **profissionais e experimentadores experientes**.
 
 ---
