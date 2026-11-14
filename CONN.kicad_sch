@@ -1138,23 +1138,25 @@
 		(dnp no)
 		(uuid "3153b897-24e0-41e2-a243-ddeeab2938be")
 		(property "Reference" "J1"
-			(at 64.77 77.47 0)
+			(at 82.55 81.28 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Value" "TB_1x03_5.00mm"
-			(at 64.77 74.93 0)
+			(at 82.55 83.82 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" "ZAT_TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-03P_1x03_P5.00mm_DG306"
@@ -1242,23 +1244,25 @@
 		(dnp no)
 		(uuid "37aaf5b4-5086-4cac-a5c7-e62b23f4161b")
 		(property "Reference" "J2"
-			(at 133.35 74.93 0)
+			(at 143.51 83.82 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Value" "TB_1x03_5.00mm"
-			(at 133.35 78.74 0)
+			(at 143.51 86.36 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" "ZAT_TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-03P_1x03_P5.00mm_DG306"

@@ -2321,7 +2321,7 @@
 		(dnp no)
 		(uuid "32b1310b-f1ca-44fe-b978-f044121bd1d7")
 		(property "Reference" "R1"
-			(at 39.37 80.01 90)
+			(at 39.37 80.645 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2331,7 +2331,7 @@
 			)
 		)
 		(property "Value" "220R"
-			(at 39.37 82.55 90)
+			(at 39.37 82.55 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2532,7 +2532,7 @@
 		(dnp no)
 		(uuid "37f3038e-fef1-4aa8-8cf6-016c26b523f6")
 		(property "Reference" "R4"
-			(at 68.326 98.044 0)
+			(at 73.025 95.25 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2543,7 +2543,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 69.596 95.504 0)
+			(at 73.025 97.79 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2749,25 +2749,25 @@
 		(dnp no)
 		(uuid "7684b1b0-ac20-4cfd-9593-3c127864858f")
 		(property "Reference" "D2"
-			(at 72.136 73.914 90)
+			(at 74.93 72.39 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Value" "1N4007"
-			(at 68.58 71.882 90)
+			(at 74.93 74.93 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" "ZAT_Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal_1N4007"
@@ -3030,7 +3030,7 @@
 		(dnp no)
 		(uuid "af6f6a54-e4df-4af8-b15d-4ee2d72018e0")
 		(property "Reference" "R2"
-			(at 66.04 85.09 90)
+			(at 66.04 87.63 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3040,7 +3040,7 @@
 			)
 		)
 		(property "Value" "4k7"
-			(at 66.04 87.63 90)
+			(at 66.04 92.71 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3358,7 +3358,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 40.386 87.884 90)
+			(at 41.91 87.63 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
