@@ -1,0 +1,51 @@
+11-13 22:55:44 com_github_MitjaNemec_Archive3DModels.action_archive_3d_models 238:Plugin executed on: 'win32'
+11-13 22:55:44 com_github_MitjaNemec_Archive3DModels.action_archive_3d_models 239:Plugin executed with python version: '3.11.5 (main, Oct 29 2026, 05:20:44) [MSC v.1951 64 bit (AMD64)]'
+11-13 22:55:44 com_github_MitjaNemec_Archive3DModels.action_archive_3d_models 240:KiCad build version: 10.0.8
+11-13 22:55:44 com_github_MitjaNemec_Archive3DModels.action_archive_3d_models 241:Plugin version: 1.0.15
+11-13 22:55:44 com_github_MitjaNemec_Archive3DModels.action_archive_3d_models 246:Screen sizes: [wx.Size(3840, 2160), wx.Size(3840, 2160)]
+11-13 22:55:44 com_github_MitjaNemec_Archive3DModels.action_archive_3d_models 253:Dialog size: wx.Size(213, 81)
+11-13 22:55:44 com_github_MitjaNemec_Archive3DModels.action_archive_3d_models 255:Char size: 25
+11-13 22:55:46 com_github_MitjaNemec_Archive3DModels.archive_3d_models 30:Starting to archive 3D models
+11-13 22:55:46 com_github_MitjaNemec_Archive3DModels.archive_3d_models 51:Getting 3D models for footprint of: U1
+11-13 22:55:46 com_github_MitjaNemec_Archive3DModels.archive_3d_models 63:Trying to copy: ${ZAT_3D}/PC817/PC817_DIP.step
+11-13 22:55:46 com_github_MitjaNemec_Archive3DModels.archive_3d_models 150:Remapping: ${ZAT_3D}/PC817/PC817_DIP.step
+11-13 22:55:46 com_github_MitjaNemec_Archive3DModels.archive_3d_models 51:Getting 3D models for footprint of: J2
+11-13 22:55:46 com_github_MitjaNemec_Archive3DModels.archive_3d_models 63:Trying to copy: ${ZAT_3D}/BORNE KRE VARIOS/DG306-5.0-03P-12-00AH.STEP
+11-13 22:55:46 com_github_MitjaNemec_Archive3DModels.archive_3d_models 150:Remapping: ${ZAT_3D}/BORNE KRE VARIOS/DG306-5.0-03P-12-00AH.STEP
+11-13 22:55:46 com_github_MitjaNemec_Archive3DModels.archive_3d_models 51:Getting 3D models for footprint of: H3
+11-13 22:55:46 com_github_MitjaNemec_Archive3DModels.archive_3d_models 51:Getting 3D models for footprint of: J1
+11-13 22:55:46 com_github_MitjaNemec_Archive3DModels.archive_3d_models 63:Trying to copy: ${ZAT_3D}/BORNE KRE VARIOS/DG306-5.0-03P-12-00AH.STEP
+11-13 22:55:46 com_github_MitjaNemec_Archive3DModels.archive_3d_models 150:Remapping: ${ZAT_3D}/BORNE KRE VARIOS/DG306-5.0-03P-12-00AH.STEP
+11-13 22:55:46 com_github_MitjaNemec_Archive3DModels.archive_3d_models 51:Getting 3D models for footprint of: R4
+11-13 22:55:46 com_github_MitjaNemec_Archive3DModels.archive_3d_models 63:Trying to copy: ${ZAT_3D}/RESISTORES/Resistor Axial 0.5W - Pitch 12.7mm (500mil) - Value 10K.STEP
+11-13 22:55:47 com_github_MitjaNemec_Archive3DModels.archive_3d_models 150:Remapping: ${ZAT_3D}/RESISTORES/Resistor Axial 0.5W - Pitch 12.7mm (500mil) - Value 10K.STEP
+11-13 22:55:47 com_github_MitjaNemec_Archive3DModels.archive_3d_models 51:Getting 3D models for footprint of: R3
+11-13 22:55:47 com_github_MitjaNemec_Archive3DModels.archive_3d_models 63:Trying to copy: ${ZAT_3D}/RESISTORES/Resistor Axial 0.5W - Pitch 12.7mm (500mil) - Value 470R.STEP
+11-13 22:55:47 com_github_MitjaNemec_Archive3DModels.archive_3d_models 150:Remapping: ${ZAT_3D}/RESISTORES/Resistor Axial 0.5W - Pitch 12.7mm (500mil) - Value 470R.STEP
+11-13 22:55:47 com_github_MitjaNemec_Archive3DModels.archive_3d_models 51:Getting 3D models for footprint of: G***
+11-13 22:55:47 com_github_MitjaNemec_Archive3DModels.archive_3d_models 51:Getting 3D models for footprint of: G***
+11-13 22:55:47 com_github_MitjaNemec_Archive3DModels.archive_3d_models 51:Getting 3D models for footprint of: G***
+11-13 22:55:47 com_github_MitjaNemec_Archive3DModels.archive_3d_models 51:Getting 3D models for footprint of: G***
+11-13 22:55:47 com_github_MitjaNemec_Archive3DModels.archive_3d_models 51:Getting 3D models for footprint of: H2
+11-13 22:55:47 com_github_MitjaNemec_Archive3DModels.archive_3d_models 51:Getting 3D models for footprint of: D1
+11-13 22:55:47 com_github_MitjaNemec_Archive3DModels.archive_3d_models 63:Trying to copy: ${ZAT_3D}/LED 5MM/LED 5mm Blue.step
+11-13 22:55:47 com_github_MitjaNemec_Archive3DModels.archive_3d_models 150:Remapping: ${ZAT_3D}/LED 5MM/LED 5mm Blue.step
+11-13 22:55:47 com_github_MitjaNemec_Archive3DModels.archive_3d_models 51:Getting 3D models for footprint of: G***
+11-13 22:55:47 com_github_MitjaNemec_Archive3DModels.archive_3d_models 51:Getting 3D models for footprint of: H1
+11-13 22:55:47 com_github_MitjaNemec_Archive3DModels.archive_3d_models 51:Getting 3D models for footprint of: K1
+11-13 22:55:47 com_github_MitjaNemec_Archive3DModels.archive_3d_models 63:Trying to copy: ${ZAT_3D}/RELE/RELÉ AY1RC2 12VDC 15A.STEP
+11-13 22:55:47 com_github_MitjaNemec_Archive3DModels.archive_3d_models 150:Remapping: ${ZAT_3D}/RELE/RELÉ AY1RC2 12VDC 15A.STEP
+11-13 22:55:47 com_github_MitjaNemec_Archive3DModels.archive_3d_models 51:Getting 3D models for footprint of: D2
+11-13 22:55:47 com_github_MitjaNemec_Archive3DModels.archive_3d_models 63:Trying to copy: ${ZAT_3D}/DIODO RETIFICADOR/Diodo 1N4007.STEP
+11-13 22:55:47 com_github_MitjaNemec_Archive3DModels.archive_3d_models 150:Remapping: ${ZAT_3D}/DIODO RETIFICADOR/Diodo 1N4007.STEP
+11-13 22:55:47 com_github_MitjaNemec_Archive3DModels.archive_3d_models 51:Getting 3D models for footprint of: R2
+11-13 22:55:47 com_github_MitjaNemec_Archive3DModels.archive_3d_models 63:Trying to copy: ${ZAT_3D}/RESISTORES/Resistor Axial 0.5W - Pitch 12.7mm (500mil) - Value 4K7.STEP
+11-13 22:55:47 com_github_MitjaNemec_Archive3DModels.archive_3d_models 150:Remapping: ${ZAT_3D}/RESISTORES/Resistor Axial 0.5W - Pitch 12.7mm (500mil) - Value 4K7.STEP
+11-13 22:55:47 com_github_MitjaNemec_Archive3DModels.archive_3d_models 51:Getting 3D models for footprint of: H4
+11-13 22:55:47 com_github_MitjaNemec_Archive3DModels.archive_3d_models 51:Getting 3D models for footprint of: G***
+11-13 22:55:47 com_github_MitjaNemec_Archive3DModels.archive_3d_models 51:Getting 3D models for footprint of: Q1
+11-13 22:55:47 com_github_MitjaNemec_Archive3DModels.archive_3d_models 63:Trying to copy: ${ZAT_3D}/TRANSISTORES/Transistor BC548.STEP
+11-13 22:55:47 com_github_MitjaNemec_Archive3DModels.archive_3d_models 150:Remapping: ${ZAT_3D}/TRANSISTORES/Transistor BC548.STEP
+11-13 22:55:47 com_github_MitjaNemec_Archive3DModels.archive_3d_models 51:Getting 3D models for footprint of: R1
+11-13 22:55:47 com_github_MitjaNemec_Archive3DModels.archive_3d_models 63:Trying to copy: ${ZAT_3D}/RESISTORES/Resistor Axial 0.5W - Pitch 12.7mm (500mil) - Value 220R.STEP
+11-13 22:55:47 com_github_MitjaNemec_Archive3DModels.archive_3d_models 150:Remapping: ${ZAT_3D}/RESISTORES/Resistor Axial 0.5W - Pitch 12.7mm (500mil) - Value 220R.STEP

@@ -368,7 +368,7 @@
 			(uuid "7d9bb117-6980-4d46-bc76-dc440d6090d9")
 		)
 		(embedded_fonts no)
-		(model "${ZAT_3D}/PC817/PC817_DIP.step"
+		(model "${KIPRJMOD}/packages3D/PC817_DIP.step"
 			(offset
 				(xyz 3.8 -1.3 0)
 			)
@@ -884,7 +884,7 @@
 			(uuid "01d79be4-9e7f-464f-a5e1-80fb1f49f15b")
 		)
 		(embedded_fonts no)
-		(model "${ZAT_3D}/BORNE KRE VARIOS/DG306-5.0-03P-12-00AH.STEP"
+		(model "${KIPRJMOD}/packages3D/DG306-5.0-03P-12-00AH.STEP"
 			(offset
 				(xyz -2.5 4 0)
 			)
@@ -1489,7 +1489,7 @@
 			(uuid "e2953eb2-351b-4b96-bc8d-de8904753a75")
 		)
 		(embedded_fonts no)
-		(model "${ZAT_3D}/BORNE KRE VARIOS/DG306-5.0-03P-12-00AH.STEP"
+		(model "${KIPRJMOD}/packages3D/DG306-5.0-03P-12-00AH.STEP"
 			(offset
 				(xyz -2.5 4 0)
 			)
@@ -1699,7 +1699,7 @@
 			(uuid "fb0f2251-1a69-4874-85b1-b47fbde9f6a9")
 		)
 		(embedded_fonts no)
-		(model "${ZAT_3D}/RESISTORES/Resistor Axial 0.5W - Pitch 12.7mm (500mil) - Value 10K.STEP"
+		(model "${KIPRJMOD}/packages3D/Resistor Axial 0.5W - Pitch 12.7mm (500mil) - Value 10K.STEP"
 			(offset
 				(xyz 3.799999995 0 1.6)
 			)
@@ -1909,7 +1909,7 @@
 			(uuid "8dcae9ea-8c41-4bfc-ad48-06c4477aa532")
 		)
 		(embedded_fonts no)
-		(model "${ZAT_3D}/RESISTORES/Resistor Axial 0.5W - Pitch 12.7mm (500mil) - Value 470R.STEP"
+		(model "${KIPRJMOD}/packages3D/Resistor Axial 0.5W - Pitch 12.7mm (500mil) - Value 470R.STEP"
 			(offset
 				(xyz 3.799999995 0 1.6)
 			)
@@ -3285,7 +3285,7 @@
 			(uuid "7e4f1833-5f75-4116-9932-ed52b8056f28")
 		)
 		(embedded_fonts no)
-		(model "${ZAT_3D}/LED 5MM/LED 5mm Blue.step"
+		(model "${KIPRJMOD}/packages3D/LED 5mm Blue.step"
 			(offset
 				(xyz 1.3 0 0)
 			)
@@ -4048,7 +4048,7 @@
 			(uuid "4014e80d-65d4-4100-ab62-0004d92d5a43")
 		)
 		(embedded_fonts no)
-		(model "${ZAT_3D}/RELE/RELÉ AY1RC2 12VDC 15A.STEP"
+		(model "${KIPRJMOD}/packages3D/RELÉ AY1RC2 12VDC 15A.STEP"
 			(offset
 				(xyz 8 0 15)
 			)
@@ -4358,7 +4358,7 @@
 			(uuid "91f4ca0b-29f0-4b5a-b711-8b60684e81a9")
 		)
 		(embedded_fonts no)
-		(model "${ZAT_3D}/DIODO RETIFICADOR/Diodo 1N4007.STEP"
+		(model "${KIPRJMOD}/packages3D/Diodo 1N4007.STEP"
 			(offset
 				(xyz 5.2 0 1.5)
 			)
@@ -4568,7 +4568,7 @@
 			(uuid "d34a8e3b-60da-49d3-b52b-b7726b6c78d8")
 		)
 		(embedded_fonts no)
-		(model "${ZAT_3D}/RESISTORES/Resistor Axial 0.5W - Pitch 12.7mm (500mil) - Value 4K7.STEP"
+		(model "${KIPRJMOD}/packages3D/Resistor Axial 0.5W - Pitch 12.7mm (500mil) - Value 4K7.STEP"
 			(offset
 				(xyz 3.799999995 0 1.6)
 			)
@@ -5115,7 +5115,7 @@
 			(uuid "69da8651-1e1c-4c77-b857-1303a50eea93")
 		)
 		(embedded_fonts no)
-		(model "${ZAT_3D}/TRANSISTORES/Transistor BC548.STEP"
+		(model "${KIPRJMOD}/packages3D/Transistor BC548.STEP"
 			(offset
 				(xyz 1.09 4.9 4.5)
 			)
@@ -5325,7 +5325,7 @@
 			(uuid "cc4a84f3-d81f-4e6e-8c3a-8a2c1dc7c592")
 		)
 		(embedded_fonts no)
-		(model "${ZAT_3D}/RESISTORES/Resistor Axial 0.5W - Pitch 12.7mm (500mil) - Value 220R.STEP"
+		(model "${KIPRJMOD}/packages3D/Resistor Axial 0.5W - Pitch 12.7mm (500mil) - Value 220R.STEP"
 			(offset
 				(xyz 3.799999995 0 1.6)
 			)
